@@ -1,0 +1,116 @@
+{
+  "name": "mrc-single-plane-single-link",
+  "mgmt": {
+    "network": "mrc-single-plane-single-link-mgmt",
+    "ipv4-subnet": "172.31.250.0/24"
+  },
+  "topology": {
+    "defaults": {
+      "kind": "linux",
+      "image": "mrc-poc-frr:10.5.0",
+      "sysctls": {
+        "net.ipv6.conf.all.disable_ipv6": "0",
+        "net.ipv6.conf.default.disable_ipv6": "0",
+        "net.ipv6.conf.all.forwarding": "1",
+        "net.ipv6.conf.all.seg6_enabled": "1",
+        "net.ipv6.conf.default.seg6_enabled": "1"
+      }
+    },
+    "nodes": {
+      "h1": {
+        "binds": [
+          "../../transport.py:/opt/transport.py",
+          "paths.json:/opt/paths.json",
+          "results:/results"
+        ],
+        "cmd": "sleep infinity"
+      },
+      "h2": {
+        "binds": [
+          "../../transport.py:/opt/transport.py",
+          "paths.json:/opt/paths.json",
+          "results:/results"
+        ],
+        "cmd": "sleep infinity"
+      },
+      "a1": {
+        "binds": [
+          "../../transport.py:/opt/transport.py",
+          "paths.json:/opt/paths.json",
+          "results:/results",
+          "configs/a1.conf:/etc/frr/frr.conf",
+          "configs/daemons:/etc/frr/daemons",
+          "configs/vtysh.conf:/etc/frr/vtysh.conf"
+        ]
+      },
+      "b1": {
+        "binds": [
+          "../../transport.py:/opt/transport.py",
+          "paths.json:/opt/paths.json",
+          "results:/results",
+          "configs/b1.conf:/etc/frr/frr.conf",
+          "configs/daemons:/etc/frr/daemons",
+          "configs/vtysh.conf:/etc/frr/vtysh.conf"
+        ]
+      },
+      "s11": {
+        "binds": [
+          "../../transport.py:/opt/transport.py",
+          "paths.json:/opt/paths.json",
+          "results:/results",
+          "configs/s11.conf:/etc/frr/frr.conf",
+          "configs/daemons:/etc/frr/daemons",
+          "configs/vtysh.conf:/etc/frr/vtysh.conf"
+        ]
+      },
+      "s12": {
+        "binds": [
+          "../../transport.py:/opt/transport.py",
+          "paths.json:/opt/paths.json",
+          "results:/results",
+          "configs/s12.conf:/etc/frr/frr.conf",
+          "configs/daemons:/etc/frr/daemons",
+          "configs/vtysh.conf:/etc/frr/vtysh.conf"
+        ]
+      }
+    },
+    "links": [
+      {
+        "endpoints": [
+          "h1:eth1",
+          "a1:eth1"
+        ]
+      },
+      {
+        "endpoints": [
+          "h2:eth1",
+          "b1:eth1"
+        ]
+      },
+      {
+        "endpoints": [
+          "a1:eth2",
+          "s11:eth1"
+        ]
+      },
+      {
+        "endpoints": [
+          "a1:eth3",
+          "s12:eth1"
+        ]
+      },
+      {
+        "endpoints": [
+          "b1:eth2",
+          "s11:eth2"
+        ]
+      },
+      {
+        "endpoints": [
+          "b1:eth3",
+          "s12:eth2"
+        ]
+      }
+    ]
+  }
+}

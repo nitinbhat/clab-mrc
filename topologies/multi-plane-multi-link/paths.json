@@ -1,0 +1,170 @@
+[
+  {
+    "ev": 1,
+    "plane": 1,
+    "host_link": 1,
+    "host_interface": "eth1",
+    "spine": "s11",
+    "nodes": [
+      "h1",
+      "a1",
+      "s11",
+      "b1",
+      "h2"
+    ],
+    "destination": "fc00:200:1::2",
+    "segments": [
+      "fc00:b::10",
+      "fc00:d::1",
+      "fc00:c::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 2,
+    "plane": 1,
+    "host_link": 1,
+    "host_interface": "eth1",
+    "spine": "s12",
+    "nodes": [
+      "h1",
+      "a1",
+      "s12",
+      "b1",
+      "h2"
+    ],
+    "destination": "fc00:200:2::2",
+    "segments": [
+      "fc00:b::10",
+      "fc00:e::1",
+      "fc00:c::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 3,
+    "plane": 1,
+    "host_link": 2,
+    "host_interface": "eth2",
+    "spine": "s11",
+    "nodes": [
+      "h1",
+      "a1",
+      "s11",
+      "b1",
+      "h2"
+    ],
+    "destination": "fc00:200:3::2",
+    "segments": [
+      "fc00:b::11",
+      "fc00:d::1",
+      "fc00:c::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 4,
+    "plane": 1,
+    "host_link": 2,
+    "host_interface": "eth2",
+    "spine": "s12",
+    "nodes": [
+      "h1",
+      "a1",
+      "s12",
+      "b1",
+      "h2"
+    ],
+    "destination": "fc00:200:4::2",
+    "segments": [
+      "fc00:b::11",
+      "fc00:e::1",
+      "fc00:c::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 5,
+    "plane": 2,
+    "host_link": 1,
+    "host_interface": "eth3",
+    "spine": "s21",
+    "nodes": [
+      "h1",
+      "a2",
+      "s21",
+      "b2",
+      "h2"
+    ],
+    "destination": "fc00:200:5::2",
+    "segments": [
+      "fc00:15::10",
+      "fc00:17::1",
+      "fc00:16::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 6,
+    "plane": 2,
+    "host_link": 1,
+    "host_interface": "eth3",
+    "spine": "s22",
+    "nodes": [
+      "h1",
+      "a2",
+      "s22",
+      "b2",
+      "h2"
+    ],
+    "destination": "fc00:200:6::2",
+    "segments": [
+      "fc00:15::10",
+      "fc00:18::1",
+      "fc00:16::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 7,
+    "plane": 2,
+    "host_link": 2,
+    "host_interface": "eth4",
+    "spine": "s21",
+    "nodes": [
+      "h1",
+      "a2",
+      "s21",
+      "b2",
+      "h2"
+    ],
+    "destination": "fc00:200:7::2",
+    "segments": [
+      "fc00:15::11",
+      "fc00:17::1",
+      "fc00:16::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 8,
+    "plane": 2,
+    "host_link": 2,
+    "host_interface": "eth4",
+    "spine": "s22",
+    "nodes": [
+      "h1",
+      "a2",
+      "s22",
+      "b2",
+      "h2"
+    ],
+    "destination": "fc00:200:8::2",
+    "segments": [
+      "fc00:15::11",
+      "fc00:18::1",
+      "fc00:16::1",
+      "fc00:c8::d"
+    ]
+  }
+]

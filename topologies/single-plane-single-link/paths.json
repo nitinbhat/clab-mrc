@@ -1,0 +1,44 @@
+[
+  {
+    "ev": 1,
+    "plane": 1,
+    "host_link": 1,
+    "host_interface": "eth1",
+    "spine": "s11",
+    "nodes": [
+      "h1",
+      "a1",
+      "s11",
+      "b1",
+      "h2"
+    ],
+    "destination": "fc00:200:1::2",
+    "segments": [
+      "fc00:b::10",
+      "fc00:d::1",
+      "fc00:c::1",
+      "fc00:c8::d"
+    ]
+  },
+  {
+    "ev": 2,
+    "plane": 1,
+    "host_link": 1,
+    "host_interface": "eth1",
+    "spine": "s12",
+    "nodes": [
+      "h1",
+      "a1",
+      "s12",
+      "b1",
+      "h2"
+    ],
+    "destination": "fc00:200:2::2",
+    "segments": [
+      "fc00:b::10",
+      "fc00:e::1",
+      "fc00:c::1",
+      "fc00:c8::d"
+    ]
+  }
+]
