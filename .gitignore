@@ -2,3 +2,7 @@ __pycache__/
 clab-*/
 results/
 pasted-image-*.png
+resilient-ai-supercomputer-networking-using-mrc-and-srv6.pdf
+topologies/*/README.md
+!topologies/multi-plane-multi-link/README.md
+!topologies/multi-plane-multi-link-mrc/README.md

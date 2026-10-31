@@ -1,0 +1,36 @@
+{
+  "fabric": "mrc",
+  "planes": 2,
+  "host_links": 1,
+  "spines": 2,
+  "hosts": {
+    "h1": {
+      "index": 1,
+      "nic": "fc00:100::1",
+      "ports": {
+        "eth1": [
+          1,
+          1
+        ],
+        "eth2": [
+          2,
+          1
+        ]
+      }
+    },
+    "h2": {
+      "index": 2,
+      "nic": "fc00:200::1",
+      "ports": {
+        "eth1": [
+          1,
+          1
+        ],
+        "eth2": [
+          2,
+          1
+        ]
+      }
+    }
+  }
+}
