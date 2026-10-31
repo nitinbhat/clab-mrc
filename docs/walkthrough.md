@@ -528,7 +528,32 @@ Single experiments: `make experiment NAME=<name> FABRIC=<fabric>` (or
 `silent-link`, `partial-loss`, `gray-switch`, `nic-plane`, `ecmp-collision`,
 `random-loss`, `ecn`, `clustermap` (`spray`, `ecn` and `clustermap` need
 `--fabric mrc`) and the baseline-only `silent-link-bfd` and `gray-switch-bfd`.
-Results go to `topologies/<lab>/results/experiments/<name>/`. Open any `*.pcap`
-in Wireshark; the matching `*.txt` is the `tcpdump -v` decode.
+Results go to `topologies/<lab>/results/experiments/<name>/`; the curated copy
+is in `docs/evidence/multi-plane-multi-link/{baseline,mrc}/<name>/`.
+
+### Reading the pcaps
+
+Each `*.pcap` has a matching `*.txt` (the `tcpdump -v` decode). Captures are
+truncated to 200 bytes per packet. The traffic is UDP, so there is no stream to
+follow.
+
+| File (under `docs/evidence/multi-plane-multi-link/`) | What it shows |
+|---|---|
+| `mrc/spray/1-h1-port1.pcap` | Packet leaving the sender: outer destination is the uSID path, inner is the NIC address |
+| `mrc/spray/2-s11-ingress.pcap` | Same packet at a spine, outer destination shifted once |
+| `mrc/spray/3-b1-to-h2.pcap`, `4-h2-ingress.pcap` | Last hop and the receiver |
+| `mrc/gray-switch/s11-to-b1-during-fault.pcap` | Spine output during the fault, compare with `baseline/gray-switch/` |
+| `mrc/ecn-*/s11-ingress.pcap` | ECN marking with and without ECN avoidance |
+
+Useful filters:
+
+- `ipv6.nxt == 41`: outer IPv6 headers (IPv6-in-IPv6); the outer `ipv6.dst` is the path.
+- `udp.dstport == 4791`: data packets. Wireshark labels them RRoCE and flags them
+  malformed, because the lab uses its own header, not a real RoCE one.
+- `udp.srcport == <n>`: one EV. The EV is the UDP source port, so different
+  ports are different paths.
+- SACKs go back to the EV port, not 4791, so they show as plain UDP. Use
+  `udp && !(udp.dstport == 4791)` to see them.
+- `ipv6.tclass` (low two bits = 3 means CE) in the `ecn-*` captures.
 
 [paper]: https://cdn.openai.com/pdf/resilient-ai-supercomputer-networking-using-mrc-and-srv6.pdf
