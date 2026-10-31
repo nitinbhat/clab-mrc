@@ -399,6 +399,11 @@ IP6 (class 0x03, ... next-header IPv6 (41) ...) fd00:10:1::1 > fcbb:0:5110:b101:
 ```
 
 (`class 0x03` = CE on the outer header; inner header still ECT(0).) The
+capture is a short sample (20 packets) taken at s11 while both flows are
+active, and it looks the same with and without avoidance: all packets are CE
+and use the s11 path, `qp=1` is flow A and `qp=2` is flow B. It proves the
+marking only; the effect of avoidance is in the table below. Decode it with
+`python3 pcap_decode.py <pcap>` (see the pcap section at the end). The
 responder echoes CE in its SACK for that EV; the sender skips that EV for 4 ms.
 
 | Variant | Flow A share via s11: before / with B / after | a1->s11 queue | Flow B goodput (offered 1,400) | False loss declarations A / B |
