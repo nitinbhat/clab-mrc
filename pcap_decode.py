@@ -6,6 +6,7 @@ Optional analysis tool; the lab itself does not need scapy (pip install scapy).
     python3 pcap_decode.py docs/evidence/multi-plane-multi-link/mrc/spray/1-h1-port1.pcap
     python3 pcap_decode.py FILE --only sack --limit 5
     python3 pcap_decode.py FILE --summary
+    python3 pcap_decode.py FILE --timeline     # data per EV per 100 ms, resends
 """
 import argparse
 import ipaddress
@@ -66,7 +67,7 @@ def describe(pkt, number):
         if len(extra) == SACK_EXT.size:
             ports, ce = SACK_EXT.unpack(extra)
             parts.append(f"port_bitmap={ports:#04b} ce_echo={ce}")
-    return " ".join(parts), {"opcode": name, "ev": ev, "srv6": srv6}
+    return " ".join(parts), {"opcode": name, "ev": ev, "psn": psn, "srv6": srv6}
 
 
 SACK = 2
@@ -80,9 +81,12 @@ def main():
     ap.add_argument("--limit", type=int, help="stop after N packets shown")
     ap.add_argument("--summary", action="store_true",
                     help="print packet counts per type and per EV instead of each packet")
+    ap.add_argument("--timeline", action="store_true",
+                    help="data packets per EV per 100 ms, plus resent PSNs and probes")
     args = ap.parse_args()
 
     counts, evs, shown = Counter(), Counter(), 0
+    buckets, seen, start = {}, set(), None
     for number, pkt in enumerate(rdpcap(args.pcap), 1):
         result = describe(pkt, number)
         if result is None:
@@ -91,6 +95,17 @@ def main():
         if args.only and rec["opcode"].lower() != args.only:
             continue
         counts[rec["opcode"]] += 1
+        if args.timeline:
+            start = float(pkt.time) if start is None else start
+            row = buckets.setdefault(int((float(pkt.time) - start) * 10), Counter())
+            if rec["opcode"] == "DATA":
+                row[f"ev={rec['ev']:#x}"] += 1
+                if rec["psn"] in seen:
+                    row["resent"] += 1
+                seen.add(rec["psn"])
+            elif "PROBE" in rec["opcode"]:
+                row["probes"] += 1
+            continue
         if rec["opcode"] == "DATA":
             evs[rec["ev"]] += 1
         if args.summary:
@@ -99,6 +114,8 @@ def main():
         shown += 1
         if args.limit and shown >= args.limit:
             break
+    for tenth, row in sorted(buckets.items()):
+        print(f"{tenth / 10:5.1f}s  " + "  ".join(f"{k}:{v}" for k, v in sorted(row.items())))
     if args.summary:
         for name, n in counts.most_common():
             print(f"{name:14} {n}")

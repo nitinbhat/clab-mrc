@@ -308,7 +308,7 @@ During each run, the lab also polls what the **control plane** believes
 | Fault | Baseline: eBGP + ECMP | mrc: static uSID + MRC endpoint |
 |---|---|---|
 | `link-down`: a1-s11 administratively down | no interruption (local ECMP repair) | no interruption; EVs retired after 21 ms, back 82 ms after repair |
-| `silent-link`: a1-s11 drops everything, carrier up | **nothing delivered for 2.27 s** (BGP hold timer); 4,562 retransmissions | no interruption; EVs retired after 24 ms, back 84 ms after repair |
+| `silent-link`: a1-s11 drops everything, carrier up | **nothing delivered for 2.27 s** (BGP hold timer); 4,562 retransmissions | no interruption; EVs retired after 19 ms, back 82 ms after repair |
 | `gray-switch`: s11 stops forwarding, control plane up | **nothing delivered for 3.03 s, until repaired**; 6,065 retransmissions | no interruption; EVs retired after 18 ms, back 93 ms after repair |
 | `nic-plane`: h2 loses both plane-1 NIC ports | **nothing delivered for 1.99 s, until repaired**; 4,336 retransmissions | no interruption; EVs denied 7 ms after the fault (port bitmap), back 53 ms after repair |
 
@@ -548,6 +548,7 @@ follow.
 | `mrc/spray/2-s11-ingress.pcap` | Same packet at a spine, outer destination shifted once |
 | `mrc/spray/3-b1-to-h2.pcap`, `4-h2-ingress.pcap` | Last hop and the receiver |
 | `mrc/gray-switch/s11-to-b1-during-fault.pcap` | Spine output during the fault, compare with `baseline/gray-switch/` |
+| `mrc/silent-link/h1-port1-around-fault.pcap` | One NIC port from 0.5 s before to 2.5 s after the fault: traffic moves between EVs, resent PSNs, probes |
 | `mrc/ecn-*/s11-ingress.pcap` | ECN marking with and without ECN avoidance |
 
 To decode the lab header (path, EV, PSN, SACK bitmap, ECN) without Wireshark:
@@ -558,6 +559,22 @@ python3 pcap_decode.py docs/evidence/multi-plane-multi-link/mrc/spray/1-h1-port1
 python3 pcap_decode.py FILE --only sack      # data, sack, probe, ev_probe, ...
 python3 pcap_decode.py FILE --summary        # packet counts per type and per EV
 ```
+
+The failure capture is the clearest packet-level view of MRC at work. Output of
+`python3 pcap_decode.py docs/evidence/multi-plane-multi-link/mrc/silent-link/h1-port1-around-fault.pcap --timeline`
+(abridged; the fault hits at 0.5 s):
+
+```text
+  0.4s  ev=0x10111:50
+  0.5s  ev=0x10111:23  ev=0x10112:27  probes:3  resent:2
+  0.6s  ev=0x10112:50  probes:4
+```
+
+EV `0x10111` is plane 1, link 1, spine 1 (the path through the failing a1-s11
+link). Within one 100 ms bucket the port stops using it and sends on
+`0x10112` (spine 2) instead, the packets lost on the dead path are sent again
+(`resent`), and probes continue. The
+delivery rate never drops.
 
 An empty result (for example the gray-switch capture on the baseline) means no
 lab packets crossed that interface.

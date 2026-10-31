@@ -967,7 +967,14 @@ def run_fault_once(name, label, directory, bfd):
                               "--duration", duration, "--drain", 8, "--start-at", start)
         repaired = False
         try:
-            time.sleep(max(0.0, start + fault_at - time.time()))
+            around = name == "silent-link" and FABRIC == "mrc" and not bfd
+            time.sleep(max(0.0, start + fault_at - (0.5 if around else 0) - time.time()))
+            if around:
+                # Packets on one NIC port around the fault: EVs going quiet, resends.
+                around_cap = capture(directory, "h1-port1-around-fault", "h1",
+                                 host_port_iface("h1", 1, 1), "ip6 and ip6[6] == 41",
+                                 count=4000, seconds=3)
+                time.sleep(max(0.0, start + fault_at - time.time()))
             t_fault = inject(True)
             if name == "gray-switch":
                 # What leaves the "broken" spine towards b1 during the fault.
@@ -981,6 +988,8 @@ def run_fault_once(name, label, directory, bfd):
             if not repaired:
                 inject(False)
         sender.wait(timeout=duration + 30)
+    if around:
+        around_cap.wait(timeout=30)
     if name == "gray-switch":
         cap.wait(timeout=30)
         decode_capture(directory, "s11-to-b1-during-fault", "s11")

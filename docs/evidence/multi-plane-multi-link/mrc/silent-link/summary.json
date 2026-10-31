@@ -9,39 +9,40 @@
     "--active-per-plane",
     2
   ],
-  "fault_at": 1793361451.5878456,
-  "repair_at": 1793361456.0654979,
+  "fault_at": 1793444825.0458028,
+  "repair_at": 1793444829.5025144,
   "algo": "mrc",
-  "sent_new": 14988,
-  "delivered": 14988,
+  "sent_new": 14991,
+  "delivered": 14991,
   "undelivered": 0,
-  "losses": 13,
-  "retransmissions": 13,
-  "goodput_pps": 1998,
-  "goodput_before_pps": 1992,
+  "losses": 11,
+  "retransmissions": 11,
+  "goodput_pps": 1999,
+  "goodput_before_pps": 2000,
   "goodput_during_fault_pps": 1999,
   "recovery_ms": 10,
   "recovered_before_repair": true,
   "longest_zero_delivery_ms": 0,
-  "losses_after_fault": 13,
-  "first_ev_retired_ms": 24,
+  "losses_after_fault": 11,
+  "first_ev_retired_ms": 19,
   "evs_retired": [
     "10111"
   ],
   "backup_evs_activated": [
     "10112"
   ],
-  "first_ev_restored_ms": 84,
+  "ev_state_changes_during_fault": 1,
+  "first_ev_restored_ms": 82,
   "control_plane_ms_after_fault": {
     "a1 uSID routes installed": [
       {
-        "t_ms": -2551,
+        "t_ms": -2574,
         "value": "6"
       }
     ],
     "bgpd processes on a1": [
       {
-        "t_ms": -2520,
+        "t_ms": -2547,
         "value": "0"
       }
     ]

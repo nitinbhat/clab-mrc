@@ -110,7 +110,7 @@ run. Full numbers, charts and raw files: [docs/evidence](docs/evidence/multi-pla
 | Fault | Baseline: eBGP + ECMP, single-path flow | mrc: static uSID, MRC-style endpoint |
 |---|---|---|
 | T0-T1 link administratively down | no interruption (local ECMP repair) | no interruption; failed EVs retired after 21 ms |
-| T0-T1 link silently drops everything | **no delivery for 2.27 s** (BGP hold timer) | no interruption; EVs retired after 24 ms, back 84 ms after repair |
+| T0-T1 link silently drops everything | **no delivery for 2.27 s** (BGP hold timer) | no interruption; EVs retired after 19 ms, back 82 ms after repair |
 | Spine stops forwarding, control plane up | **no delivery for 3.03 s, until repaired**; BGP stays up | no interruption; EVs retired after 18 ms, back 93 ms after repair |
 | Receiver loses its plane-1 NIC ports | **no delivery for 1.99 s, until repaired** | no interruption; peer told via SACK port bitmap in 7 ms |
 | One link drops 20% of packets | **515 pkt/s of 2,000**, degraded for the whole fault | 2,000 pkt/s; EVs retired after 2 ms |

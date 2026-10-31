@@ -19,7 +19,7 @@ laptop lab cannot supply:
 |---|---|
 | RDMA NIC with MRC in silicon | Packets are produced by Python processes over UDP sockets. No verbs, no queue pairs in hardware, no memory registration, no write placement. |
 | MRC wire format (BTH/RETH extensions) | The lab uses its own small header. Only the SACK body follows the OCP MRC 1.0 specification. A real MRC NIC cannot talk to this lab. |
-| Microsecond reaction times | Python timers: 20 ms retransmit and probe intervals. Ratios carry over; absolute times (24 ms here) do not. |
+| Microsecond reaction times | Python timers: 20 ms retransmit and probe intervals. Ratios carry over; absolute times (19 ms here) do not. |
 | Packet trimming and trim NACKs | Needs switch ASIC support; the Linux kernel cannot trim. Without it, congestion loss is detected by timeout, not instantly. |
 | NSCC congestion control | Replaced by a fixed window and fixed pacing rate. |
 | Scale: 128-256 EVs per QP, 8 planes, hundreds of switches | 8 paths, 2 planes, 10 switches. |
@@ -61,7 +61,7 @@ The complete list is in [walkthrough section 11](walkthrough.md#11-what-is-not-m
 
 - **Absolute performance.** 2,000 pkt/s over Python says nothing about 800 Gb/s
   NICs. Treat times as relative (MRC is about 100 times faster to react than the
-  hold timer here, not "24 ms").
+  hold timer here, not "19 ms").
 - **Interoperability or spec compliance.** The lab is not an MRC implementation
   and passes no conformance test.
 - **That BGP is a poor choice in general.** The baseline flow is deliberately

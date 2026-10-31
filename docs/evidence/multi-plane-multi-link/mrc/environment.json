@@ -2,7 +2,7 @@
   "profile": "multi-plane-multi-link",
   "fabric": "mrc",
   "kernel": "6.1.0-0.deb11.21-amd64",
-  "collected_at_utc": "2026-10-31T05:58:25.703584+00:00",
+  "collected_at_utc": "2026-10-31T11:07:11.739248+00:00",
   "control_plane": {
     "bgpd_running": {
       "a1": false,
