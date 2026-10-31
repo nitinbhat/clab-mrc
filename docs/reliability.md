@@ -1,8 +1,14 @@
 # Reliability reference milestone
 
 `mrc_reliability.py` adds **MRC-specific, deterministic software components**.
-It is not a complete MRC endpoint, a transport replacement, or evidence of
-interoperability. The existing containerlab traffic generator still uses JSON/UDP.
+It is not a complete MRC endpoint or evidence of interoperability.
+
+Since the static-uSID milestone, the lab endpoint (`transport.py`) uses these
+components on the wire: every data packet's PSN comes from `Requestor.send()`,
+the responder runs one `Receiver` per QP, and every SACK is the binary 36-byte
+SETH + CC_STATE body produced here (followed by a two-byte lab extension
+carrying the NIC port bitmap and CE echo). The data header in front of it is a
+lab format, not the MRC BTH. See [the walkthrough](walkthrough.md).
 
 The source is the [OCP MRC specification, revision 1.0, dated 2026-03-21][spec].
 The field layouts were checked against the rendered PDF tables, not only
@@ -95,8 +101,8 @@ silently truncated or interpreted as valid feedback.
 
 ## Tests and evidence
 
-There are 21 focused reference tests, in addition to the five existing lab and
-simulator unit tests. They cover:
+There are 21 focused reference tests (the lab and endpoint have their own
+tests in `test_lab.py` and `test_transport.py`). They cover:
 
 - A manually constructed fixed 36-byte vector covering field order, signed
   offsets, bitmap endpoints, and CC bitfields; this is not just a round-trip test.
@@ -119,11 +125,17 @@ or RDMA semantics.
 
 ## Deliberately not implemented
 
-The milestone omits BTH/request headers, NETH/NACK processing, full data and control
-packet encapsulation, automatic loss detection, linear/exponential retry timers,
-retry exhaustion/QP ERROR transitions, reliability/EV probe exchanges, dynamic MPR,
-AR-triggered SACK completion, RTX reflection, NSCC, packet trimming, RDMA Write
-placement and semantic ACKs, QP negotiation/APIs, and transport integration.
+The model itself omits BTH/request headers, NETH/NACK processing, full data and
+control packet encapsulation, linear/exponential retry timers, retry
+exhaustion/QP ERROR transitions, dynamic MPR, AR-triggered SACK completion, RTX
+reflection, NSCC, packet trimming, RDMA Write placement and semantic ACKs, and
+QP negotiation/APIs.
+
+The lab endpoint adds, outside this model and in simplified lab form: loss
+detection (per-path FIFO gaps plus a fixed RTO), selective retransmission on a
+different EV, path probes and EV probes with their own lab opcodes, and a
+port-state bitmap. These follow the behaviour described in the OpenAI/Microsoft
+paper, not the specification's exact encodings or timers.
 
 An empty `Requestor.outstanding` means only that this model's packet-reception
 state was acknowledged. It does **not** mean an RDMA operation completed.
