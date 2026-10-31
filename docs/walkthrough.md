@@ -545,7 +545,19 @@ follow.
 | `mrc/gray-switch/s11-to-b1-during-fault.pcap` | Spine output during the fault, compare with `baseline/gray-switch/` |
 | `mrc/ecn-*/s11-ingress.pcap` | ECN marking with and without ECN avoidance |
 
-Useful filters:
+To decode the lab header (path, EV, PSN, SACK bitmap, ECN) without Wireshark:
+
+```sh
+pip install scapy        # only this optional tool needs it
+python3 pcap_decode.py docs/evidence/multi-plane-multi-link/mrc/spray/1-h1-port1.pcap --limit 5
+python3 pcap_decode.py FILE --only sack      # data, sack, probe, ev_probe, ...
+python3 pcap_decode.py FILE --summary        # packet counts per type and per EV
+```
+
+An empty result (for example the gray-switch capture on the baseline) means no
+lab packets crossed that interface.
+
+Useful Wireshark filters:
 
 - `ipv6.nxt == 41`: outer IPv6 headers (IPv6-in-IPv6); the outer `ipv6.dst` is the path.
 - `udp.dstport == 4791`: data packets. Wireshark labels them RRoCE and flags them
