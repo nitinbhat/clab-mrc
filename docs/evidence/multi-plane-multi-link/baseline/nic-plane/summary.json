@@ -1,0 +1,50 @@
+{
+  "experiment": "nic-plane",
+  "description": "h2 loses its plane-1 NIC port(s) (links to b1 down), then they recover",
+  "profile": "multi-plane-multi-link",
+  "fabric": "baseline",
+  "sender_args": [
+    "--algo",
+    "roce",
+    "--evs",
+    "c002"
+  ],
+  "fault_at": 1793361321.762539,
+  "repair_at": 1793361323.7542877,
+  "algo": "roce",
+  "sent_new": 5656,
+  "delivered": 5656,
+  "undelivered": 0,
+  "losses": 127,
+  "retransmissions": 4336,
+  "goodput_pps": 1131,
+  "goodput_before_pps": 2000,
+  "goodput_during_fault_pps": 9,
+  "recovery_ms": 2180,
+  "recovered_before_repair": false,
+  "longest_zero_delivery_ms": 1990,
+  "losses_after_fault": 127,
+  "go_back_n_events": 128,
+  "control_plane_ms_after_fault": {
+    "a1 route to h2 (fc00:200::/48) in plane 1": [
+      {
+        "t_ms": -2489,
+        "value": "fc00:200::/48 nhid 35 proto bgp metric 2"
+      },
+      {
+        "t_ms": 419,
+        "value": ""
+      },
+      {
+        "t_ms": 2395,
+        "value": "fc00:200::/48 nhid 35 proto bgp metric 2"
+      }
+    ],
+    "h1 ECMP next hops to fc00:200::/48 (all planes)": [
+      {
+        "t_ms": -2498,
+        "value": "4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "experiment": "ecmp-collision",
+  "profile": "multi-plane-multi-link",
+  "fabric": "baseline",
+  "description": "4 flows of 700 pkt/s over links limited to 10 Mbit/s",
+  "link_mbit": 10,
+  "offered_aggregate_pps": 2800,
+  "mean_aggregate_goodput_pps": 1788,
+  "mean_worst_flow_goodput_pps": 343,
+  "trials": [
+    {
+      "seed": 1,
+      "per_flow_goodput_pps": [
+        700,
+        177,
+        204,
+        700
+      ],
+      "aggregate_goodput_pps": 1781,
+      "worst_flow_goodput_pps": 177,
+      "retransmissions": 6118,
+      "link_tx_packets": {
+        "h1:eth1": 4211,
+        "h1:eth2": 4222,
+        "h1:eth3": 4204,
+        "h1:eth4": 4203,
+        "a1:eth3": 20,
+        "a1:eth4": 7021,
+        "a2:eth3": 4212,
+        "a2:eth4": 4211
+      },
+      "uplinks_carrying_traffic": "3/4",
+      "busiest_uplink_to_average": 1.82
+    },
+    {
+      "seed": 2,
+      "per_flow_goodput_pps": [
+        188,
+        242,
+        152,
+        202
+      ],
+      "aggregate_goodput_pps": 784,
+      "worst_flow_goodput_pps": 152,
+      "retransmissions": 12094,
+      "link_tx_packets": {
+        "h1:eth1": 4213,
+        "h1:eth2": 4220,
+        "h1:eth3": 4212,
+        "h1:eth4": 4205,
+        "a1:eth3": 18,
+        "a1:eth4": 7023,
+        "a2:eth3": 7004,
+        "a2:eth4": 9
+      },
+      "uplinks_carrying_traffic": "2/4",
+      "busiest_uplink_to_average": 2.0
+    },
+    {
+      "seed": 3,
+      "per_flow_goodput_pps": [
+        700,
+        700,
+        700,
+        700
+      ],
+      "aggregate_goodput_pps": 2800,
+      "worst_flow_goodput_pps": 700,
+      "retransmissions": 0,
+      "link_tx_packets": {
+        "h1:eth1": 4199,
+        "h1:eth2": 4200,
+        "h1:eth3": 4200,
+        "h1:eth4": 4201,
+        "a1:eth3": 4218,
+        "a1:eth4": 4218,
+        "a2:eth3": 4209,
+        "a2:eth4": 4210
+      },
+      "uplinks_carrying_traffic": "4/4",
+      "busiest_uplink_to_average": 1.0
+    }
+  ]
+}

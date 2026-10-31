@@ -1,0 +1,150 @@
+{
+  "host": "h1",
+  "targets": [
+    {
+      "target": "T0 a1 via port 1",
+      "plane": 1,
+      "link": 1,
+      "spine": null,
+      "id": 0,
+      "address": "fcbb:0:a101:e111::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 436,
+      "ok": true
+    },
+    {
+      "target": "T1 s11 via port 1",
+      "plane": 1,
+      "link": 1,
+      "spine": 1,
+      "id": 1,
+      "address": "fcbb:0:a101:5110:a101:e111::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 342,
+      "ok": true
+    },
+    {
+      "target": "T1 s12 via port 1",
+      "plane": 1,
+      "link": 1,
+      "spine": 2,
+      "id": 2,
+      "address": "fcbb:0:a101:5120:a101:e111::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 317,
+      "ok": true
+    },
+    {
+      "target": "T0 a1 via port 2",
+      "plane": 1,
+      "link": 2,
+      "spine": null,
+      "id": 3,
+      "address": "fcbb:0:a102:e112::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 306,
+      "ok": true
+    },
+    {
+      "target": "T1 s11 via port 2",
+      "plane": 1,
+      "link": 2,
+      "spine": 1,
+      "id": 4,
+      "address": "fcbb:0:a102:5110:a102:e112::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 300,
+      "ok": true
+    },
+    {
+      "target": "T1 s12 via port 2",
+      "plane": 1,
+      "link": 2,
+      "spine": 2,
+      "id": 5,
+      "address": "fcbb:0:a102:5120:a102:e112::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 300,
+      "ok": true
+    },
+    {
+      "target": "T0 a2 via port 1",
+      "plane": 2,
+      "link": 1,
+      "spine": null,
+      "id": 6,
+      "address": "fcbb:0:a201:e121::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 301,
+      "ok": true
+    },
+    {
+      "target": "T1 s21 via port 1",
+      "plane": 2,
+      "link": 1,
+      "spine": 1,
+      "id": 7,
+      "address": "fcbb:0:a201:5210:a201:e121::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 291,
+      "ok": true
+    },
+    {
+      "target": "T1 s22 via port 1",
+      "plane": 2,
+      "link": 1,
+      "spine": 2,
+      "id": 8,
+      "address": "fcbb:0:a201:5220:a201:e121::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 279,
+      "ok": true
+    },
+    {
+      "target": "T0 a2 via port 2",
+      "plane": 2,
+      "link": 2,
+      "spine": null,
+      "id": 9,
+      "address": "fcbb:0:a202:e122::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 267,
+      "ok": true
+    },
+    {
+      "target": "T1 s21 via port 2",
+      "plane": 2,
+      "link": 2,
+      "spine": 1,
+      "id": 10,
+      "address": "fcbb:0:a202:5210:a202:e122::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 261,
+      "ok": true
+    },
+    {
+      "target": "T1 s22 via port 2",
+      "plane": 2,
+      "link": 2,
+      "spine": 2,
+      "id": 11,
+      "address": "fcbb:0:a202:5220:a202:e122::",
+      "sent": 20,
+      "received": 20,
+      "median_rtt_us": 258,
+      "ok": true
+    }
+  ],
+  "diagnosis": []
+}

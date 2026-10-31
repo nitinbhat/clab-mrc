@@ -1,0 +1,298 @@
+{
+  "experiment": "ecn-no-ecn-avoid",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "uplink_mbit": 20,
+  "flow_a": {
+    "algo": "mrc",
+    "fabric": "mrc",
+    "sent_new": 14150,
+    "delivered": 14150,
+    "undelivered": 0,
+    "losses": 247,
+    "retransmissions": 219,
+    "goodput_pps": 2358
+  },
+  "flow_b": {
+    "algo": "mrc",
+    "fabric": "mrc",
+    "sent_new": 3099,
+    "delivered": 3099,
+    "undelivered": 0,
+    "losses": 312,
+    "retransmissions": 0,
+    "goodput_pps": 1240
+  },
+  "flow_a_share_before_competitor": {
+    "via s11": 0.5,
+    "via s12": 0.5
+  },
+  "flow_a_share_with_competitor": {
+    "via s11": 0.36,
+    "via s12": 0.64
+  },
+  "flow_a_share_after_competitor": {
+    "via s11": 0.5,
+    "via s12": 0.5
+  },
+  "flow_a_ce_echoes": 1586,
+  "uplink_queues": {
+    "a1->s11": {
+      "sent_packets": 9772,
+      "dropped": 0,
+      "ecn_marked": 3355,
+      "early_drops": 0,
+      "tail_drops": 0
+    },
+    "a1->s12": {
+      "sent_packets": 8228,
+      "dropped": 0,
+      "ecn_marked": 162,
+      "early_drops": 0,
+      "tail_drops": 0
+    }
+  },
+  "spurious_loss_declarations": {
+    "flow_a": 28,
+    "flow_b": 312
+  },
+  "flow_a_evs_retired": [
+    "10111"
+  ],
+  "flow_a_events": [
+    {
+      "t": 1793361393.787627,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361393.835215,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361393.955884,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361394.015701,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361394.153322,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361394.198892,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361394.338825,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361394.399883,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361394.55084,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361394.601799,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361394.748122,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361394.803761,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361394.927992,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361394.985023,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361395.125814,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361395.185403,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361395.330183,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361395.386114,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361395.528111,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361395.58705,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361395.734514,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361395.787752,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361395.934954,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361395.991918,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    },
+    {
+      "t": 1793361396.120428,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ACTIVE",
+      "new": "ASSUMED_BAD",
+      "reason": "timeout"
+    },
+    {
+      "t": 1793361396.17224,
+      "event": "ev_state",
+      "ev": "10111",
+      "plane": 1,
+      "old": "ASSUMED_BAD",
+      "new": "BACKUP",
+      "reason": "probes succeeded"
+    }
+  ]
+}

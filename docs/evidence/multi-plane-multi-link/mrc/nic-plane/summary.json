@@ -1,0 +1,50 @@
+{
+  "experiment": "nic-plane",
+  "description": "h2 loses its plane-1 NIC port(s) (links to b1 down), then they recover",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "sender_args": [
+    "--algo",
+    "mrc",
+    "--active-per-plane",
+    2
+  ],
+  "fault_at": 1793361375.2229593,
+  "repair_at": 1793361377.184873,
+  "algo": "mrc",
+  "sent_new": 9992,
+  "delivered": 9992,
+  "undelivered": 0,
+  "losses": 9,
+  "retransmissions": 9,
+  "goodput_pps": 1998,
+  "goodput_before_pps": 1996,
+  "goodput_during_fault_pps": 1993,
+  "recovery_ms": 0,
+  "recovered_before_repair": true,
+  "longest_zero_delivery_ms": 0,
+  "losses_after_fault": 9,
+  "first_ev_retired_ms": 7,
+  "evs_retired": [
+    "10111",
+    "10112",
+    "10121",
+    "10122"
+  ],
+  "backup_evs_activated": [],
+  "first_ev_restored_ms": 53,
+  "control_plane_ms_after_fault": {
+    "a1 uSID routes installed": [
+      {
+        "t_ms": -2511,
+        "value": "6"
+      }
+    ],
+    "bgpd processes on a1": [
+      {
+        "t_ms": -2549,
+        "value": "0"
+      }
+    ]
+  }
+}

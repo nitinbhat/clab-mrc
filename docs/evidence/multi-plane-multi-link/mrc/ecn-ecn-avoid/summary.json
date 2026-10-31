@@ -1,0 +1,61 @@
+{
+  "experiment": "ecn-ecn-avoid",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "uplink_mbit": 20,
+  "flow_a": {
+    "algo": "mrc",
+    "fabric": "mrc",
+    "sent_new": 14383,
+    "delivered": 14383,
+    "undelivered": 0,
+    "losses": 0,
+    "retransmissions": 0,
+    "goodput_pps": 2397
+  },
+  "flow_b": {
+    "algo": "mrc",
+    "fabric": "mrc",
+    "sent_new": 3500,
+    "delivered": 3500,
+    "undelivered": 0,
+    "losses": 0,
+    "retransmissions": 0,
+    "goodput_pps": 1400
+  },
+  "flow_a_share_before_competitor": {
+    "via s11": 0.5,
+    "via s12": 0.5
+  },
+  "flow_a_share_with_competitor": {
+    "via s11": 0.35,
+    "via s12": 0.65
+  },
+  "flow_a_share_after_competitor": {
+    "via s11": 0.5,
+    "via s12": 0.5
+  },
+  "flow_a_ce_echoes": 271,
+  "uplink_queues": {
+    "a1->s11": {
+      "sent_packets": 10038,
+      "dropped": 0,
+      "ecn_marked": 805,
+      "early_drops": 0,
+      "tail_drops": 0
+    },
+    "a1->s12": {
+      "sent_packets": 8303,
+      "dropped": 0,
+      "ecn_marked": 4,
+      "early_drops": 0,
+      "tail_drops": 0
+    }
+  },
+  "spurious_loss_declarations": {
+    "flow_a": 0,
+    "flow_b": 0
+  },
+  "flow_a_evs_retired": [],
+  "flow_a_events": []
+}

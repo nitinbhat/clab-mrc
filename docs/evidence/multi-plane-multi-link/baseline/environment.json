@@ -1,0 +1,52 @@
+{
+  "profile": "multi-plane-multi-link",
+  "fabric": "baseline",
+  "kernel": "6.1.0-0.deb11.21-amd64",
+  "collected_at_utc": "2026-10-31T05:59:15.681434+00:00",
+  "control_plane": {
+    "neighbors": {
+      "a1": {
+        "fd00:10:5::2": "Established",
+        "fd00:10:6::2": "Established"
+      },
+      "b1": {
+        "fd00:10:7::2": "Established",
+        "fd00:10:8::2": "Established"
+      },
+      "s11": {
+        "fd00:10:5::1": "Established",
+        "fd00:10:7::1": "Established"
+      },
+      "s12": {
+        "fd00:10:6::1": "Established",
+        "fd00:10:8::1": "Established"
+      },
+      "a2": {
+        "fd00:10:d::2": "Established",
+        "fd00:10:e::2": "Established"
+      },
+      "b2": {
+        "fd00:10:f::2": "Established",
+        "fd00:10:10::2": "Established"
+      },
+      "s21": {
+        "fd00:10:d::1": "Established",
+        "fd00:10:f::1": "Established"
+      },
+      "s22": {
+        "fd00:10:e::1": "Established",
+        "fd00:10:10::1": "Established"
+      }
+    },
+    "ecmp_routes": {
+      "a1": [
+        "fe80::a8c1:abff:fe5d:cf7",
+        "fe80::a8c1:abff:fee9:c4b1"
+      ],
+      "a2": [
+        "fe80::a8c1:abff:fe1a:abaf",
+        "fe80::a8c1:abff:febf:e685"
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "experiment": "silent-link",
+  "description": "T0-T1 link a1-s11 drops everything (carrier stays up)",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "sender_args": [
+    "--algo",
+    "mrc",
+    "--active-per-plane",
+    2
+  ],
+  "fault_at": 1793361451.5878456,
+  "repair_at": 1793361456.0654979,
+  "algo": "mrc",
+  "sent_new": 14988,
+  "delivered": 14988,
+  "undelivered": 0,
+  "losses": 13,
+  "retransmissions": 13,
+  "goodput_pps": 1998,
+  "goodput_before_pps": 1992,
+  "goodput_during_fault_pps": 1999,
+  "recovery_ms": 10,
+  "recovered_before_repair": true,
+  "longest_zero_delivery_ms": 0,
+  "losses_after_fault": 13,
+  "first_ev_retired_ms": 24,
+  "evs_retired": [
+    "10111"
+  ],
+  "backup_evs_activated": [
+    "10112"
+  ],
+  "first_ev_restored_ms": 84,
+  "control_plane_ms_after_fault": {
+    "a1 uSID routes installed": [
+      {
+        "t_ms": -2551,
+        "value": "6"
+      }
+    ],
+    "bgpd processes on a1": [
+      {
+        "t_ms": -2520,
+        "value": "0"
+      }
+    ]
+  }
+}

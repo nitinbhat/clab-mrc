@@ -1,0 +1,64 @@
+{
+  "experiment": "spray",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "algo": "mrc",
+  "sent_new": 2001,
+  "delivered": 2001,
+  "undelivered": 0,
+  "losses": 0,
+  "retransmissions": 0,
+  "goodput_pps": 1000,
+  "psn_range": [
+    "fffef0",
+    "0006c0"
+  ],
+  "packets_per_ev": {
+    "10111": 254,
+    "10112": 250,
+    "10121": 252,
+    "10122": 248,
+    "10211": 249,
+    "10212": 251,
+    "10221": 247,
+    "10222": 250
+  },
+  "packets_per_plane": {
+    "1": 1004,
+    "2": 997
+  },
+  "receiver_packets_per_ev": {
+    "10112": 250,
+    "10212": 251,
+    "10111": 254,
+    "10121": 252,
+    "10222": 250,
+    "10122": 248,
+    "10221": 247,
+    "10211": 249
+  },
+  "receiver_reverse_ev_per_plane": {
+    "1": {
+      "ev": "10111",
+      "confirmed": false,
+      "at": 1793361345.7698057
+    },
+    "2": {
+      "ev": "10212",
+      "confirmed": false,
+      "at": 1793361345.781758
+    }
+  },
+  "expected_outer_destination": {
+    "1-h1-port1": "fcbb:0:a101:5110:b101:e211::",
+    "2-s11-ingress": "fcbb:0:5110:b101:e211::",
+    "3-b1-to-h2": "fcbb:0:e211::",
+    "4-h2-ingress": "fcbb:0:e211::"
+  },
+  "seen_in_capture": {
+    "1-h1-port1": true,
+    "2-s11-ingress": true,
+    "3-b1-to-h2": true,
+    "4-h2-ingress": true
+  }
+}

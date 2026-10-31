@@ -1,0 +1,30 @@
+05:59:09.989713 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.018436 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.075802 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.117499 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.171861 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.196560 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.269913 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.295610 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.347943 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.390656 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.438976 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.474735 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.515062 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.566785 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.612113 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.649828 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.696888 IP6 fd00:10:7::2.50824 > fd00:10:7::1.179: Flags [P.], seq 40683210:40683229, ack 2954901469, win 439, options [nop,nop,TS val 414583584 ecr 2439144168], length 19: BGP
+05:59:10.696908 IP6 fd00:10:7::1.179 > fd00:10:7::2.50824: Flags [.], ack 19, win 439, options [nop,nop,TS val 2439145168 ecr 414583584], length 0
+05:59:10.696984 IP6 fd00:10:7::1.179 > fd00:10:7::2.50824: Flags [P.], seq 1:20, ack 19, win 439, options [nop,nop,TS val 2439145169 ecr 414583584], length 19: BGP
+05:59:10.703155 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.732865 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.741958 IP6 fd00:10:7::2.50824 > fd00:10:7::1.179: Flags [.], ack 20, win 439, options [nop,nop,TS val 414583630 ecr 2439145169], length 0
+05:59:10.778192 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.832938 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.877308 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.929985 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:10.969359 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:11.012533 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:11.044402 IP6 fd00:10:7::1.49158 > fd00:10:7::2.3784: BFDv1, Control, State Up, Flags: [none], length: 24
+05:59:11.100585 IP6 fd00:10:7::2.49159 > fd00:10:7::1.3784: BFDv1, Control, State Up, Flags: [none], length: 24

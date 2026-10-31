@@ -1,0 +1,38 @@
+{
+  "experiment": "random-loss",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "description": "Uniform random loss on every leaf-to-spine link, both directions",
+  "cases_by_loss_percent": {
+    "0": {
+      "goodput_pps": 3996,
+      "offered_pps": 4000,
+      "delivered": 23978,
+      "sent_new": 23978,
+      "undelivered": 0,
+      "retransmissions": 0,
+      "retransmitted_pct_of_new": 0.0,
+      "completed_after_s": 6.0
+    },
+    "0.1": {
+      "goodput_pps": 3986,
+      "offered_pps": 4000,
+      "delivered": 23915,
+      "sent_new": 23915,
+      "undelivered": 0,
+      "retransmissions": 30,
+      "retransmitted_pct_of_new": 0.1,
+      "completed_after_s": 6.0
+    },
+    "1.0": {
+      "goodput_pps": 3954,
+      "offered_pps": 4000,
+      "delivered": 23723,
+      "sent_new": 23723,
+      "undelivered": 0,
+      "retransmissions": 244,
+      "retransmitted_pct_of_new": 1.0,
+      "completed_after_s": 6.0
+    }
+  }
+}

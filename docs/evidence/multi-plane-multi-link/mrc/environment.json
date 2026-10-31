@@ -1,0 +1,80 @@
+{
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "kernel": "6.1.0-0.deb11.21-amd64",
+  "collected_at_utc": "2026-10-31T05:58:25.703584+00:00",
+  "control_plane": {
+    "bgpd_running": {
+      "a1": false,
+      "b1": false,
+      "s11": false,
+      "s12": false,
+      "a2": false,
+      "b2": false,
+      "s21": false,
+      "s22": false
+    },
+    "usid_tables": {
+      "a1": [
+        "unicast fcbb:0:5110::/48 nhid 66 via fd00:10:5::2 dev eth3 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:5120::/48 nhid 13 via fd00:10:6::2 dev eth4 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:a101::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:a102::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:e111::/48 nhid 22 via fd00:10:1::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:e112::/48 nhid 23 via fd00:10:3::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ],
+      "b1": [
+        "unicast fcbb:0:5110::/48 nhid 8 via fd00:10:7::2 dev eth3 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:5120::/48 nhid 29 via fd00:10:8::2 dev eth4 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b101::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:b102::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:e211::/48 nhid 83 via fd00:10:2::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:e212::/48 nhid 84 via fd00:10:4::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ],
+      "s11": [
+        "unicast fcbb:0:5110::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:a101::/48 nhid 54 via fd00:10:5::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:a102::/48 nhid 54 via fd00:10:5::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b101::/48 nhid 16 via fd00:10:7::1 dev eth2 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b102::/48 nhid 16 via fd00:10:7::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ],
+      "s12": [
+        "unicast fcbb:0:5120::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:a101::/48 nhid 9 via fd00:10:6::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:a102::/48 nhid 9 via fd00:10:6::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b101::/48 nhid 14 via fd00:10:8::1 dev eth2 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b102::/48 nhid 14 via fd00:10:8::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ],
+      "a2": [
+        "unicast fcbb:0:5210::/48 nhid 23 via fd00:10:d::2 dev eth3 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:5220::/48 nhid 24 via fd00:10:e::2 dev eth4 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:a201::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:a202::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:e121::/48 nhid 21 via fd00:10:9::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:e122::/48 nhid 22 via fd00:10:b::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ],
+      "b2": [
+        "unicast fcbb:0:5210::/48 nhid 12 via fd00:10:f::2 dev eth3 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:5220::/48 nhid 27 via fd00:10:10::2 dev eth4 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b201::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:b202::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:e221::/48 nhid 5 via fd00:10:a::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:e222::/48 nhid 28 via fd00:10:c::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ],
+      "s21": [
+        "unicast fcbb:0:5210::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:a201::/48 nhid 5 via fd00:10:d::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:a202::/48 nhid 5 via fd00:10:d::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b201::/48 nhid 6 via fd00:10:f::1 dev eth2 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b202::/48 nhid 6 via fd00:10:f::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ],
+      "s22": [
+        "unicast fcbb:0:5220::/48  encap seg6local action End flavors next-csid lblen 32 nflen 16 dev usid0 proto boot scope global metric 1024 pref medium",
+        "unicast fcbb:0:a201::/48 nhid 14 via fd00:10:e::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:a202::/48 nhid 14 via fd00:10:e::1 dev eth1 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b201::/48 nhid 15 via fd00:10:10::1 dev eth2 proto 196 scope global metric 20 pref medium",
+        "unicast fcbb:0:b202::/48 nhid 15 via fd00:10:10::1 dev eth2 proto 196 scope global metric 20 pref medium"
+      ]
+    }
+  }
+}

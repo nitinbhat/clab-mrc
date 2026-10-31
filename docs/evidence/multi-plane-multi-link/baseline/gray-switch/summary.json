@@ -1,0 +1,42 @@
+{
+  "experiment": "gray-switch",
+  "description": "Spine s11 stops forwarding data; its control plane stays up",
+  "profile": "multi-plane-multi-link",
+  "fabric": "baseline",
+  "sender_args": [
+    "--algo",
+    "roce",
+    "--evs",
+    "c002"
+  ],
+  "fault_at": 1793361307.8965263,
+  "repair_at": 1793361310.9260292,
+  "algo": "roce",
+  "sent_new": 4936,
+  "delivered": 4936,
+  "undelivered": 0,
+  "losses": 157,
+  "retransmissions": 6065,
+  "goodput_pps": 897,
+  "goodput_before_pps": 1990,
+  "goodput_during_fault_pps": 0,
+  "recovery_ms": 3030,
+  "recovered_before_repair": false,
+  "longest_zero_delivery_ms": 3030,
+  "losses_after_fault": 157,
+  "go_back_n_events": 158,
+  "control_plane_ms_after_fault": {
+    "a1 BGP session to s11": [
+      {
+        "t_ms": -2458,
+        "value": "\"bgpState\":\"Established\""
+      }
+    ],
+    "a1 ECMP next hops to fc00:200::/48": [
+      {
+        "t_ms": -2444,
+        "value": "2"
+      }
+    ]
+  }
+}

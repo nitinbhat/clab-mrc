@@ -1,0 +1,3564 @@
+{
+  "algo": "mrc",
+  "fabric": "mrc",
+  "host": "h1",
+  "peer": "h2",
+  "qp": 2,
+  "rate_pps": 1400.0,
+  "duration": 2.5,
+  "size": 1000,
+  "started": 1793361384.1903968,
+  "finished": 1793361386.6966608,
+  "sent_new": 3500,
+  "delivered": 3500,
+  "psn_range": [
+    "fffee0",
+    "000c8b"
+  ],
+  "undelivered": 0,
+  "losses": 0,
+  "retransmissions": 0,
+  "send_errors": 0,
+  "evs": {
+    "20111": {
+      "state": "ACTIVE",
+      "plane": 1,
+      "port": 0,
+      "sent": 3500,
+      "acked": 3500,
+      "lost": 0,
+      "ce": 515,
+      "probes_ok": 0
+    }
+  },
+  "t0": 1793361384.1903846,
+  "bin_seconds": 0.01,
+  "events": [
+    {
+      "t": 1793361380.93243,
+      "event": "ev_activated",
+      "ev": "20111",
+      "plane": 1
+    },
+    {
+      "t": 1793361384.196329,
+      "event": "peer_port_bitmap",
+      "bitmap": 15
+    }
+  ],
+  "timeline": [
+    {
+      "t": 0.0,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 9,
+      "delivered_by_ev": {
+        "20111": 9
+      }
+    },
+    {
+      "t": 0.01,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 0.02,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 0.03,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.04,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      }
+    },
+    {
+      "t": 0.05,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.06,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.07,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.08,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.09,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.1,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 9,
+      "delivered_by_ev": {
+        "20111": 9
+      }
+    },
+    {
+      "t": 0.11,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.12,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.13,
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.14,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.15,
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      },
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 0.16,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.17,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.18,
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.19,
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.2,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.21,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.22,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.23,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 0.24,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.25,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.26,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.27,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.28,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.29,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 0.3,
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.31,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 0.32,
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.33,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.34,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 11,
+      "sent_by_ev": {
+        "20111": 11
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      }
+    },
+    {
+      "t": 0.35,
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      },
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.36,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.37,
+      "delivered": 19,
+      "delivered_by_ev": {
+        "20111": 19
+      },
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "ce": 10,
+      "ce_by_ev": {
+        "20111": 10
+      }
+    },
+    {
+      "t": 0.38,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.39,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.4,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 0.41,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.42,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.43,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.44,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.45,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.46,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.47,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.48,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.49,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.5,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.51,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.52,
+      "delivered": 20,
+      "delivered_by_ev": {
+        "20111": 20
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 0.53,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.54,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 0.55,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      }
+    },
+    {
+      "t": 0.56,
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.57,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.58,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.59,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.6,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      }
+    },
+    {
+      "t": 0.61,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.62,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.63,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 0.64,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      },
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      }
+    },
+    {
+      "t": 0.65,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.66,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.67,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.68,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 6,
+      "ce_by_ev": {
+        "20111": 6
+      }
+    },
+    {
+      "t": 0.69,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.7,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.71,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      }
+    },
+    {
+      "t": 0.72,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.73,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 20,
+      "delivered_by_ev": {
+        "20111": 20
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 0.74,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.75,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      }
+    },
+    {
+      "t": 0.76,
+      "delivered": 18,
+      "delivered_by_ev": {
+        "20111": 18
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.77,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.78,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 0.79,
+      "sent": 11,
+      "sent_by_ev": {
+        "20111": 11
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 0.8,
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 0.81,
+      "sent": 11,
+      "sent_by_ev": {
+        "20111": 11
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 0.82,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.83,
+      "delivered": 18,
+      "delivered_by_ev": {
+        "20111": 18
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.84,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 0.85,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.86,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.87,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.88,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.89,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.9,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 0.91,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.92,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 0.93,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 0.94,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      }
+    },
+    {
+      "t": 0.95,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.96,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 0.97,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 7,
+      "ce_by_ev": {
+        "20111": 7
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 0.98,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 20,
+      "delivered_by_ev": {
+        "20111": 20
+      },
+      "ce": 8,
+      "ce_by_ev": {
+        "20111": 8
+      }
+    },
+    {
+      "t": 0.99,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.0,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.01,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      }
+    },
+    {
+      "t": 1.02,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.03,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.04,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.05,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.06,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.07,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.08,
+      "delivered": 5,
+      "delivered_by_ev": {
+        "20111": 5
+      },
+      "sent": 2,
+      "sent_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.09,
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      },
+      "sent": 23,
+      "sent_by_ev": {
+        "20111": 23
+      }
+    },
+    {
+      "t": 1.1,
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.11,
+      "delivered": 19,
+      "delivered_by_ev": {
+        "20111": 19
+      },
+      "ce": 8,
+      "ce_by_ev": {
+        "20111": 8
+      },
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      }
+    },
+    {
+      "t": 1.12,
+      "sent": 11,
+      "sent_by_ev": {
+        "20111": 11
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.13,
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      },
+      "delivered": 20,
+      "delivered_by_ev": {
+        "20111": 20
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.14,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 1.15,
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 1.16,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.17,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.18,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.19,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.2,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.21,
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 6,
+      "ce_by_ev": {
+        "20111": 6
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.22,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.23,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.24,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.25,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      },
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 1.26,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.27,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.28,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.29,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.3,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 7,
+      "ce_by_ev": {
+        "20111": 7
+      }
+    },
+    {
+      "t": 1.31,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.32,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 19,
+      "delivered_by_ev": {
+        "20111": 19
+      },
+      "ce": 8,
+      "ce_by_ev": {
+        "20111": 8
+      }
+    },
+    {
+      "t": 1.33,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      }
+    },
+    {
+      "t": 1.34,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.35,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      }
+    },
+    {
+      "t": 1.36,
+      "sent": 9,
+      "sent_by_ev": {
+        "20111": 9
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.37,
+      "delivered": 19,
+      "delivered_by_ev": {
+        "20111": 19
+      },
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.38,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      }
+    },
+    {
+      "t": 1.39,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 8,
+      "delivered_by_ev": {
+        "20111": 8
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.4,
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      },
+      "delivered": 19,
+      "delivered_by_ev": {
+        "20111": 19
+      },
+      "ce": 9,
+      "ce_by_ev": {
+        "20111": 9
+      }
+    },
+    {
+      "t": 1.41,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.42,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.43,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      }
+    },
+    {
+      "t": 1.44,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.45,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.46,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      }
+    },
+    {
+      "t": 1.47,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.48,
+      "delivered": 19,
+      "delivered_by_ev": {
+        "20111": 19
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.49,
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      }
+    },
+    {
+      "t": 1.5,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.51,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.52,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.53,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      }
+    },
+    {
+      "t": 1.54,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.55,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.56,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      }
+    },
+    {
+      "t": 1.57,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      }
+    },
+    {
+      "t": 1.58,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.59,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.6,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.61,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.62,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.63,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.64,
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.65,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.66,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.67,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.68,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 1.69,
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.7,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.71,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.72,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 1.73,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.74,
+      "delivered": 18,
+      "delivered_by_ev": {
+        "20111": 18
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.75,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.76,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.77,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.78,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 6,
+      "ce_by_ev": {
+        "20111": 6
+      }
+    },
+    {
+      "t": 1.79,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 1.8,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.81,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 1.82,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.83,
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.84,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      }
+    },
+    {
+      "t": 1.85,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.86,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.87,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.88,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.89,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      }
+    },
+    {
+      "t": 1.9,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.91,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.92,
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.93,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 1.94,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.95,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 1.96,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 1.97,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 1.98,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 9,
+      "ce_by_ev": {
+        "20111": 9
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 1.99,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 8,
+      "delivered_by_ev": {
+        "20111": 8
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.0,
+      "delivered": 22,
+      "delivered_by_ev": {
+        "20111": 22
+      },
+      "ce": 8,
+      "ce_by_ev": {
+        "20111": 8
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.01,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 2.02,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.03,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.04,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 2.05,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 2.06,
+      "delivered": 20,
+      "delivered_by_ev": {
+        "20111": 20
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.07,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.08,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.09,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      }
+    },
+    {
+      "t": 2.1,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 2.11,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 2.12,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      }
+    },
+    {
+      "t": 2.13,
+      "delivered": 18,
+      "delivered_by_ev": {
+        "20111": 18
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.14,
+      "delivered": 9,
+      "delivered_by_ev": {
+        "20111": 9
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 2.15,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 2.16,
+      "sent": 18,
+      "sent_by_ev": {
+        "20111": 18
+      },
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.17,
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "sent": 13,
+      "sent_by_ev": {
+        "20111": 13
+      }
+    },
+    {
+      "t": 2.18,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.19,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.2,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.21,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.22,
+      "delivered": 16,
+      "delivered_by_ev": {
+        "20111": 16
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.23,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.24,
+      "delivered": 18,
+      "delivered_by_ev": {
+        "20111": 18
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.25,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.26,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 8,
+      "sent_by_ev": {
+        "20111": 8
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 2.27,
+      "sent": 20,
+      "sent_by_ev": {
+        "20111": 20
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.28,
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.29,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 19,
+      "delivered_by_ev": {
+        "20111": 19
+      },
+      "ce": 5,
+      "ce_by_ev": {
+        "20111": 5
+      }
+    },
+    {
+      "t": 2.3,
+      "sent": 11,
+      "sent_by_ev": {
+        "20111": 11
+      },
+      "delivered": 8,
+      "delivered_by_ev": {
+        "20111": 8
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.31,
+      "delivered": 18,
+      "delivered_by_ev": {
+        "20111": 18
+      },
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 2.32,
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "sent": 11,
+      "sent_by_ev": {
+        "20111": 11
+      }
+    },
+    {
+      "t": 2.33,
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.34,
+      "sent": 10,
+      "sent_by_ev": {
+        "20111": 10
+      },
+      "delivered": 18,
+      "delivered_by_ev": {
+        "20111": 18
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 2.35,
+      "sent": 17,
+      "sent_by_ev": {
+        "20111": 17
+      },
+      "delivered": 13,
+      "delivered_by_ev": {
+        "20111": 13
+      }
+    },
+    {
+      "t": 2.36,
+      "sent": 15,
+      "sent_by_ev": {
+        "20111": 15
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.37,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 20,
+      "delivered_by_ev": {
+        "20111": 20
+      },
+      "ce": 8,
+      "ce_by_ev": {
+        "20111": 8
+      }
+    },
+    {
+      "t": 2.38,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.39,
+      "delivered": 15,
+      "delivered_by_ev": {
+        "20111": 15
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.4,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 2.41,
+      "delivered": 9,
+      "delivered_by_ev": {
+        "20111": 9
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 2.42,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 8,
+      "ce_by_ev": {
+        "20111": 8
+      }
+    },
+    {
+      "t": 2.43,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 17,
+      "delivered_by_ev": {
+        "20111": 17
+      },
+      "ce": 3,
+      "ce_by_ev": {
+        "20111": 3
+      }
+    },
+    {
+      "t": 2.44,
+      "delivered": 14,
+      "delivered_by_ev": {
+        "20111": 14
+      },
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      }
+    },
+    {
+      "t": 2.45,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    },
+    {
+      "t": 2.46,
+      "sent": 12,
+      "sent_by_ev": {
+        "20111": 12
+      },
+      "delivered": 10,
+      "delivered_by_ev": {
+        "20111": 10
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.47,
+      "sent": 16,
+      "sent_by_ev": {
+        "20111": 16
+      },
+      "delivered": 11,
+      "delivered_by_ev": {
+        "20111": 11
+      },
+      "ce": 1,
+      "ce_by_ev": {
+        "20111": 1
+      }
+    },
+    {
+      "t": 2.48,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 23,
+      "delivered_by_ev": {
+        "20111": 23
+      },
+      "ce": 4,
+      "ce_by_ev": {
+        "20111": 4
+      }
+    },
+    {
+      "t": 2.49,
+      "sent": 14,
+      "sent_by_ev": {
+        "20111": 14
+      },
+      "delivered": 12,
+      "delivered_by_ev": {
+        "20111": 12
+      }
+    },
+    {
+      "t": 2.5,
+      "delivered": 7,
+      "delivered_by_ev": {
+        "20111": 7
+      },
+      "ce": 2,
+      "ce_by_ev": {
+        "20111": 2
+      }
+    }
+  ]
+}

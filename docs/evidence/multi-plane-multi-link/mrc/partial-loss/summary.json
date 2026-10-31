@@ -1,0 +1,49 @@
+{
+  "experiment": "partial-loss",
+  "description": "T0-T1 link a1-s11 drops 20% of packets in both directions",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "sender_args": [
+    "--algo",
+    "mrc",
+    "--active-per-plane",
+    2
+  ],
+  "fault_at": 1793426159.3057675,
+  "repair_at": 1793426163.815801,
+  "algo": "mrc",
+  "sent_new": 15001,
+  "delivered": 15001,
+  "undelivered": 0,
+  "losses": 1,
+  "retransmissions": 1,
+  "goodput_pps": 2000,
+  "goodput_before_pps": 2000,
+  "goodput_during_fault_pps": 2000,
+  "recovery_ms": 0,
+  "recovered_before_repair": true,
+  "longest_zero_delivery_ms": 0,
+  "losses_after_fault": 0,
+  "first_ev_retired_ms": 2,
+  "evs_retired": [
+    "10111"
+  ],
+  "backup_evs_activated": [
+    "10112"
+  ],
+  "ev_state_changes_during_fault": 2,
+  "control_plane_ms_after_fault": {
+    "a1 uSID routes installed": [
+      {
+        "t_ms": -2518,
+        "value": "6"
+      }
+    ],
+    "bgpd processes on a1": [
+      {
+        "t_ms": -2471,
+        "value": "0"
+      }
+    ]
+  }
+}

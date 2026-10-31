@@ -1,0 +1,62 @@
+{
+  "experiment": "silent-link",
+  "description": "T0-T1 link a1-s11 drops everything (carrier stays up)",
+  "profile": "multi-plane-multi-link",
+  "fabric": "baseline",
+  "sender_args": [
+    "--algo",
+    "roce",
+    "--evs",
+    "c002"
+  ],
+  "fault_at": 1793361440.1260824,
+  "repair_at": 1793361444.6079757,
+  "algo": "roce",
+  "sent_new": 10439,
+  "delivered": 10439,
+  "undelivered": 0,
+  "losses": 136,
+  "retransmissions": 4562,
+  "goodput_pps": 1392,
+  "goodput_before_pps": 1998,
+  "goodput_during_fault_pps": 986,
+  "recovery_ms": 2280,
+  "recovered_before_repair": true,
+  "longest_zero_delivery_ms": 2270,
+  "losses_after_fault": 136,
+  "go_back_n_events": 137,
+  "control_plane_ms_after_fault": {
+    "a1 BGP session to s11": [
+      {
+        "t_ms": -2497,
+        "value": "\"bgpState\":\"Established\""
+      },
+      {
+        "t_ms": 2315,
+        "value": "\"bgpState\":\"Idle\""
+      },
+      {
+        "t_ms": 3344,
+        "value": "\"bgpState\":\"Connect\""
+      },
+      {
+        "t_ms": 4990,
+        "value": "\"bgpState\":\"Established\""
+      }
+    ],
+    "a1 ECMP next hops to fc00:200::/48": [
+      {
+        "t_ms": -2550,
+        "value": "2"
+      },
+      {
+        "t_ms": 2479,
+        "value": "1"
+      },
+      {
+        "t_ms": 6097,
+        "value": "2"
+      }
+    ]
+  }
+}
