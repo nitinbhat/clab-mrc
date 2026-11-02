@@ -383,6 +383,8 @@ class MrcSender:
 
     # --- feedback ----------------------------------------------------------
     def on_sack(self, body, meta):
+        if len(body) < 36 + SACK_EXT.size:
+            return  # malformed or truncated SACK
         sack = Sack.decode(body[:36])
         ports, ce = SACK_EXT.unpack(body[36:38])
         try:

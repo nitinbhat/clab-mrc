@@ -4,7 +4,7 @@
 SUDO   ?=
 FABRIC ?= mrc
 NAME   ?= silent-link
-LAB    := $(SUDO) python3 lab.py
+LAB    := $(SUDO) python3 src/lab.py
 
 .DEFAULT_GOAL := help
 .PHONY: help test preflight up up-baseline up-mrc down down-baseline down-mrc experiment evidence report viz demo
@@ -23,7 +23,7 @@ help:
 	@echo "make down                  destroy both fabrics"
 
 test:
-	python3 -m unittest discover -q
+	python3 -m unittest discover -s tests -q
 
 preflight:
 	$(LAB) preflight --fabric baseline
@@ -48,17 +48,17 @@ experiment:
 demo:
 	$(LAB) experiment silent-link --fabric baseline
 	$(LAB) experiment silent-link --fabric mrc
-	python3 viz.py
+	python3 src/viz.py
 	@echo "Open docs/img/silent-link.svg in a browser."
 
 evidence:
 	$(LAB) evidence all --fabric baseline
 	$(LAB) evidence all --fabric mrc
-	python3 lab.py report
-	python3 viz.py
+	python3 src/lab.py report
+	python3 src/viz.py
 
 report:
-	python3 lab.py report
+	python3 src/lab.py report
 
 viz:
-	python3 viz.py
+	python3 src/viz.py

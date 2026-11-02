@@ -21,11 +21,14 @@ import platform
 import re
 import shutil
 import subprocess
+import sys
 import time
 
+# Add src/ to path for sibling imports when run directly
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import mrc_paths
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent  # project root, not src/
 PROJECT = ROOT
 LAB_NAME = "mrc-poc"
 PROFILES = {
@@ -317,12 +320,12 @@ def write_topology_readme(tables):
         "`sN1`/`sN2`. Hosts are shared across planes; switches are not.\n\n"
         + "\n".join(diagram) + "\n\n" + fabric_text +
         "From the project root:\n\n```sh\n"
-        f"python3 lab.py deploy {flags}\n"
-        f"python3 lab.py test {flags}\n"
-        f"python3 lab.py experiment link-down {flags}\n"
-        f"python3 lab.py destroy {flags}\n```\n\n"
+        f"python3 src/lab.py deploy {flags}\n"
+        f"python3 src/lab.py test {flags}\n"
+        f"python3 src/lab.py experiment link-down {flags}\n"
+        f"python3 src/lab.py destroy {flags}\n```\n\n"
         "`mrc.clab.yml` is JSON (valid YAML). A bare `containerlab deploy` must be "
-        f"followed by `python3 lab.py configure {flags}`. Results are written under "
+        f"followed by `python3 src/lab.py configure {flags}`. Results are written under "
         "`results/` (not version controlled).\n")
 
 
@@ -467,7 +470,7 @@ def configure_mrc():
     wait_for_static_tables()
     directory = experiment_dir("reachability")
     with responder():
-        execute("h1", "python3", "/opt/mrc/transport.py", "send", "--host", "h1",
+        execute("h1", "python3", "/opt/mrc/src/transport.py", "send", "--host", "h1",
                 "--duration", "0.5", "--rate", "400",
                 "--output", f"/results/experiments/{directory.name}/sender.json", quiet=True)
     result = json.loads((directory / "sender.json").read_text())
@@ -560,7 +563,7 @@ def experiment_dir(name):
 def responder(host="h2"):
     execute(host, "rm", "-f", f"/results/stop-{host}", f"/results/ready-{host}")
     process = subprocess.Popen(["docker", "exec", container(host), "python3",
-                                "/opt/mrc/transport.py", "serve", "--host", host])
+                                "/opt/mrc/src/transport.py", "serve", "--host", host])
     try:
         deadline = time.monotonic() + 10
         while not (ROOT / "results" / f"ready-{host}").exists():
@@ -571,13 +574,13 @@ def responder(host="h2"):
             time.sleep(0.05)
         yield
     finally:
-        execute(host, "python3", "/opt/mrc/transport.py", "stop", "--host", host, check=False)
+        execute(host, "python3", "/opt/mrc/src/transport.py", "stop", "--host", host, check=False)
         process.wait(timeout=10)
 
 
 def start_sender(directory, output, *args, host="h1"):
     return subprocess.Popen([
-        "docker", "exec", container(host), "python3", "/opt/mrc/transport.py", "send",
+        "docker", "exec", container(host), "python3", "/opt/mrc/src/transport.py", "send",
         "--host", host, "--output", f"/results/experiments/{directory.name}/{output}",
         *[str(a) for a in args]], stdout=subprocess.DEVNULL)
 
@@ -869,7 +872,7 @@ def fault_sender_args(name, directory):
     s11_port = iface_to("s11", "a1")
     for sport in pick_ecmp_ev(iface_to("h1", "a1"), checks)[:10]:
         before = rx_packets("s11", s11_port)
-        execute("h1", "python3", "/opt/mrc/transport.py", "send", "--host", "h1", "--algo",
+        execute("h1", "python3", "/opt/mrc/src/transport.py", "send", "--host", "h1", "--algo",
                 "roce", "--evs", f"{sport:x}", "--qp", "9", "--rate", "1000", "--duration",
                 "0.2", "--output", f"/results/experiments/{directory.name}/pin-check.json",
                 quiet=True)
@@ -1023,7 +1026,7 @@ def run_spray():
         captures = {label: capture(directory, label, node, iface, expression)
                     for label, (node, iface) in points.items()}
         time.sleep(1)
-        execute("h1", "python3", "/opt/mrc/transport.py", "send", "--host", "h1", "--rate", "1000",
+        execute("h1", "python3", "/opt/mrc/src/transport.py", "send", "--host", "h1", "--rate", "1000",
                 "--duration", "2", "--output", f"/results/experiments/{directory.name}/sender.json",
                 quiet=True)
         for process in captures.values():
@@ -1152,7 +1155,7 @@ def run_clustermap():
             set_blackhole("a1", iface, True)
         try:
             output = f"/results/experiments/{directory.name}/{state}.json"
-            execute("h1", "python3", "/opt/mrc/transport.py", "clustermap", "--host", "h1",
+            execute("h1", "python3", "/opt/mrc/src/transport.py", "clustermap", "--host", "h1",
                     "--count", "20", "--output", output, quiet=True)
         finally:
             set_blackhole("a1", iface, False)
@@ -1580,7 +1583,7 @@ def report(profile):
     environment = json.loads((base / "mrc" / "environment.json").read_text())
     text = (
         f"# Evidence: {profile}\n\n"
-        "Generated by `python3 lab.py report` from the files in this directory "
+        "Generated by `python3 src/lab.py report` from the files in this directory "
         "(see [the walkthrough](../../walkthrough.md) for how to read them). "
         f"Kernel `{environment['kernel']}`, collected {environment['collected_at_utc'][:10]}.\n\n"
         "Every fault run sends 2,000 packets/s for several seconds; the fault is "

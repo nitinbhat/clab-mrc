@@ -1,8 +1,21 @@
 __pycache__/
+*.pyc
 clab-*/
 results/
-pasted-image-*.png
-resilient-ai-supercomputer-networking-using-mrc-and-srv6.pdf
 topologies/*/README.md
 !topologies/multi-plane-multi-link/README.md
 !topologies/multi-plane-multi-link-mrc/README.md
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+*.local

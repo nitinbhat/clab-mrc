@@ -51,7 +51,7 @@ preflight usid_forwarding: OK
 
 ## 2. Topology: multi-plane, two tiers
 
-> Paper §2: each NIC is split into several ports, each attached to a separate
+> Paper  - 2: each NIC is split into several ports, each attached to a separate
 > Clos plane; two tiers of switches (T0, T1) are enough for 100K+ GPUs.
 
 The evidence profile `multi-plane-multi-link` has **two planes**, each with a
@@ -69,7 +69,7 @@ port-level diagram, e.g.
 
 ## 3. Static SRv6 uSID routing instead of BGP
 
-> Paper §2.2: "We took the unusual position of disabling dynamic routing in
+> Paper  - 2.2: "We took the unusual position of disabling dynamic routing in
 > the switches ... the switch left-shifts the uSID part of the address by 16
 > bits ... This new address is then looked up in the switch's static
 > forwarding table ... configured when the switch was installed, and is
@@ -130,7 +130,7 @@ fc00:200::/48 nhid 35 proto bgp metric 20 pref medium
 
 ## 4. Packet format and per-hop shifting
 
-> Paper §2.2-2.3: "MRC packets are IPv6 in IPv6 encapsulated, with the outer
+> Paper  - 2.2-2.3: "MRC packets are IPv6 in IPv6 encapsulated, with the outer
 > destination address being the SRv6 path and the inner destination address
 > containing the destination NIC's own address." "The 32-bit EV is striped
 > across the UDP source port and IPv6 flow label."
@@ -179,7 +179,7 @@ per-path state. This is the lab version of the paper's Fig. 3 template.
 
 ## 5. Spraying over an EV set
 
-> Paper §2.1: "The sender then rotates through this set, using a different EV
+> Paper  - 2.1: "The sender then rotates through this set, using a different EV
 > for each packet ... MRC chooses EVs equally split across the planes."
 
 `spray` sends 2,000 packets from one QP with all 8 EVs active
@@ -197,11 +197,11 @@ probe reply, which also uses an active EV.
 For the failure experiments the sender keeps **2 active EVs per plane and 2
 backups** (`--active-per-plane 2`), like CX-8 MRC's active plus backup EV
 sets. A failed EV is replaced from the **same plane** (section 7), which keeps
-the planes evenly loaded (paper §4).
+the planes evenly loaded (paper  - 4).
 
 ## 6. Reliability: PSNs, SACKs, selective retransmission
 
-> Paper §2.1: "MRC implements fast selective retransmission, using Selective
+> Paper  - 2.1: "MRC implements fast selective retransmission, using Selective
 > ACK (SACK) packets to indicate precisely which packets have arrived."
 
 The endpoint uses the specification-derived model in
@@ -230,10 +230,10 @@ go-back-N whenever its path was cut.
 
 ## 7. Failure handling inside the endpoint
 
-> Paper §2.1: "When a packet is not trimmed but actually lost, MRC assumes the
+> Paper  - 2.1: "When a packet is not trimmed but actually lost, MRC assumes the
 > path has failed and immediately stops using the corresponding EV ... MRC
 > sends background path probes ... If enough probes succeed, the EV is
-> resurrected." §3: "MRC uses a port state bitmap in SACK packets to notify
+> resurrected."  - 3: "MRC uses a port state bitmap in SACK packets to notify
 > remote QP endpoints that the port is down."
 
 Each EV is `ACTIVE`, `BACKUP`, `ASSUMED_BAD` (retired, being probed) or
@@ -279,7 +279,7 @@ proof that a path works.
 
 **Reverse paths.** ACKs, SACKs and probe replies use a small **reverse EV
 set**: one confirmed EV per plane, chosen by the receiver and re-confirmed every
-30 ms by EV probes that the sender answers (paper §2.4 "Reverse Paths"). SACKs
+30 ms by EV probes that the sender answers (paper  - 2.4 "Reverse Paths"). SACKs
 prefer the plane the data arrived on. A broken reverse path is dangerous: the
 sender sees no SACKs and retires forward paths that work. The responder
 therefore also treats a **duplicate** data packet as proof that the SACK it
@@ -381,9 +381,9 @@ All numbers below are in the generated
 
 ## 9. ECN as a load-balancing signal
 
-> Paper §2.1: "ECN now acts as a load-balancing signal. The receiver echoes the
+> Paper  - 2.1: "ECN now acts as a load-balancing signal. The receiver echoes the
 > ECN signal back to the sender, indicating that this specific path is more
-> congested than others, and the sender temporarily avoids it." §5.2: the
+> congested than others, and the sender temporarily avoids it."  - 5.2: the
 > two-flow experiment in which a competing flow forces one flow off a path.
 
 `ecn` shapes both a1 uplinks to 20 Mbit/s with RED ECN marking (queues on
@@ -424,7 +424,7 @@ mistaken for a path failure).
 
 ## 10. Clustermapper: source-routed self probes
 
-> Paper §3: "A Clustermapper agent on each node probes each of the ... directly
+> Paper  - 3: "A Clustermapper agent on each node probes each of the ... directly
 > connected T0s ... by sending probes source-routed to the T0 and back to the
 > same agent ... if T0 probes show no problem but T1 probes do, we know the
 > issue is the T0-T1 link."
