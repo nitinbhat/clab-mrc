@@ -115,7 +115,7 @@ The `spray/` directory contains 4 PCAPs showing one packet's journey:
 Opening `1-h1-port1.pcap`:
 
 
-![alt text](image.png)
+![alt text](img/pcap-img.png)
 
 **Understanding the rows:**
 
