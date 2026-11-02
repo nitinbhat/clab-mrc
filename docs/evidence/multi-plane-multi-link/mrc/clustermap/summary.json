@@ -1,0 +1,69 @@
+{
+  "experiment": "clustermap",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "healthy": {
+    "probes": {
+      "T0 a1 via port 1": "20/20",
+      "T1 s11 via port 1": "20/20",
+      "T1 s12 via port 1": "20/20",
+      "T0 a1 via port 2": "20/20",
+      "T1 s11 via port 2": "20/20",
+      "T1 s12 via port 2": "20/20",
+      "T0 a2 via port 1": "20/20",
+      "T1 s21 via port 1": "20/20",
+      "T1 s22 via port 1": "20/20",
+      "T0 a2 via port 2": "20/20",
+      "T1 s21 via port 2": "20/20",
+      "T1 s22 via port 2": "20/20"
+    },
+    "probe_address": {
+      "T0 a1 via port 1": "fcbb:0:a101:e111::",
+      "T1 s11 via port 1": "fcbb:0:a101:5110:a101:e111::",
+      "T1 s12 via port 1": "fcbb:0:a101:5120:a101:e111::",
+      "T0 a1 via port 2": "fcbb:0:a102:e112::",
+      "T1 s11 via port 2": "fcbb:0:a102:5110:a102:e112::",
+      "T1 s12 via port 2": "fcbb:0:a102:5120:a102:e112::",
+      "T0 a2 via port 1": "fcbb:0:a201:e121::",
+      "T1 s21 via port 1": "fcbb:0:a201:5210:a201:e121::",
+      "T1 s22 via port 1": "fcbb:0:a201:5220:a201:e121::",
+      "T0 a2 via port 2": "fcbb:0:a202:e122::",
+      "T1 s21 via port 2": "fcbb:0:a202:5210:a202:e122::",
+      "T1 s22 via port 2": "fcbb:0:a202:5220:a202:e122::"
+    },
+    "diagnosis": []
+  },
+  "a1-s11-silent-failure": {
+    "probes": {
+      "T0 a1 via port 1": "20/20",
+      "T1 s11 via port 1": "0/20",
+      "T1 s12 via port 1": "20/20",
+      "T0 a1 via port 2": "20/20",
+      "T1 s11 via port 2": "0/20",
+      "T1 s12 via port 2": "20/20",
+      "T0 a2 via port 1": "20/20",
+      "T1 s21 via port 1": "20/20",
+      "T1 s22 via port 1": "20/20",
+      "T0 a2 via port 2": "20/20",
+      "T1 s21 via port 2": "20/20",
+      "T1 s22 via port 2": "20/20"
+    },
+    "probe_address": {
+      "T0 a1 via port 1": "fcbb:0:a101:e111::",
+      "T1 s11 via port 1": "fcbb:0:a101:5110:a101:e111::",
+      "T1 s12 via port 1": "fcbb:0:a101:5120:a101:e111::",
+      "T0 a1 via port 2": "fcbb:0:a102:e112::",
+      "T1 s11 via port 2": "fcbb:0:a102:5110:a102:e112::",
+      "T1 s12 via port 2": "fcbb:0:a102:5120:a102:e112::",
+      "T0 a2 via port 1": "fcbb:0:a201:e121::",
+      "T1 s21 via port 1": "fcbb:0:a201:5210:a201:e121::",
+      "T1 s22 via port 1": "fcbb:0:a201:5220:a201:e121::",
+      "T0 a2 via port 2": "fcbb:0:a202:e122::",
+      "T1 s21 via port 2": "fcbb:0:a202:5210:a202:e122::",
+      "T1 s22 via port 2": "fcbb:0:a202:5220:a202:e122::"
+    },
+    "diagnosis": [
+      "T0-T1 link a1-s11 (or spine s11) is bad"
+    ]
+  }
+}

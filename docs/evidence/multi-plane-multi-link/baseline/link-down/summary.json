@@ -1,0 +1,62 @@
+{
+  "experiment": "link-down",
+  "description": "T0-T1 link a1-s11 administratively down, then up",
+  "profile": "multi-plane-multi-link",
+  "fabric": "baseline",
+  "sender_args": [
+    "--algo",
+    "roce",
+    "--evs",
+    "c002"
+  ],
+  "fault_at": 1793361278.6886015,
+  "repair_at": 1793361280.7486138,
+  "algo": "roce",
+  "sent_new": 12001,
+  "delivered": 12001,
+  "undelivered": 0,
+  "losses": 0,
+  "retransmissions": 0,
+  "goodput_pps": 2000,
+  "goodput_before_pps": 2002,
+  "goodput_during_fault_pps": 2000,
+  "recovery_ms": 0,
+  "recovered_before_repair": true,
+  "longest_zero_delivery_ms": 0,
+  "losses_after_fault": 0,
+  "go_back_n_events": 0,
+  "control_plane_ms_after_fault": {
+    "a1 BGP session to s11": [
+      {
+        "t_ms": -2470,
+        "value": "\"bgpState\":\"Established\""
+      },
+      {
+        "t_ms": 273,
+        "value": "\"bgpState\":\"Idle\""
+      },
+      {
+        "t_ms": 1314,
+        "value": "\"bgpState\":\"Active\""
+      },
+      {
+        "t_ms": 2311,
+        "value": "\"bgpState\":\"Established\""
+      }
+    ],
+    "a1 ECMP next hops to fc00:200::/48": [
+      {
+        "t_ms": -2446,
+        "value": "2"
+      },
+      {
+        "t_ms": 291,
+        "value": "1"
+      },
+      {
+        "t_ms": 2329,
+        "value": "2"
+      }
+    ]
+  }
+}

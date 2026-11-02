@@ -1,0 +1,49 @@
+{
+  "experiment": "gray-switch",
+  "description": "Spine s11 stops forwarding data; its control plane stays up",
+  "profile": "multi-plane-multi-link",
+  "fabric": "mrc",
+  "sender_args": [
+    "--algo",
+    "mrc",
+    "--active-per-plane",
+    2
+  ],
+  "fault_at": 1793361367.4508758,
+  "repair_at": 1793361370.4460628,
+  "algo": "mrc",
+  "sent_new": 10983,
+  "delivered": 10983,
+  "undelivered": 0,
+  "losses": 12,
+  "retransmissions": 12,
+  "goodput_pps": 1997,
+  "goodput_before_pps": 2000,
+  "goodput_during_fault_pps": 1999,
+  "recovery_ms": 10,
+  "recovered_before_repair": true,
+  "longest_zero_delivery_ms": 0,
+  "losses_after_fault": 12,
+  "first_ev_retired_ms": 18,
+  "evs_retired": [
+    "10111"
+  ],
+  "backup_evs_activated": [
+    "10112"
+  ],
+  "first_ev_restored_ms": 93,
+  "control_plane_ms_after_fault": {
+    "a1 uSID routes installed": [
+      {
+        "t_ms": -2537,
+        "value": "6"
+      }
+    ],
+    "bgpd processes on a1": [
+      {
+        "t_ms": -2501,
+        "value": "0"
+      }
+    ]
+  }
+}

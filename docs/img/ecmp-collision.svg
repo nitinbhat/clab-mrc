@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" font-family="Helvetica,Arial,sans-serif" width="960">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="26" font-size="19" font-weight="bold">ECMP collisions: 4 flows, 4 uplinks (same offered load)</text>
+<text x="40" y="62" font-size="15" font-weight="bold" fill="#e07b00">BGP + ECMP (random 5-tuple hash)</text>
+<rect x="40" y="250" width="70" height="0" fill="#e07b00"/><text x="75" y="244" font-size="12" text-anchor="middle">18</text><text x="75" y="270" font-size="12" text-anchor="middle">a1 eth3</text>
+<rect x="140" y="80" width="70" height="170" fill="#e07b00"/><text x="175" y="74" font-size="12" text-anchor="middle">7023</text><text x="175" y="270" font-size="12" text-anchor="middle">a1 eth4</text>
+<rect x="240" y="80" width="70" height="170" fill="#e07b00"/><text x="275" y="74" font-size="12" text-anchor="middle">7004</text><text x="275" y="270" font-size="12" text-anchor="middle">a2 eth3</text>
+<rect x="340" y="250" width="70" height="0" fill="#e07b00"/><text x="375" y="244" font-size="12" text-anchor="middle">9</text><text x="375" y="270" font-size="12" text-anchor="middle">a2 eth4</text>
+<text x="40" y="300" font-size="13">goodput 784 of 2800 pkt/s; worst flow 152 pkt/s</text>
+<text x="500" y="62" font-size="15" font-weight="bold" fill="#1a9850">MRC (sprayed)</text>
+<rect x="500" y="140" width="70" height="110" fill="#1a9850"/><text x="535" y="134" font-size="12" text-anchor="middle">4536</text><text x="535" y="270" font-size="12" text-anchor="middle">a1 eth3</text>
+<rect x="600" y="140" width="70" height="110" fill="#1a9850"/><text x="635" y="134" font-size="12" text-anchor="middle">4537</text><text x="635" y="270" font-size="12" text-anchor="middle">a1 eth4</text>
+<rect x="700" y="140" width="70" height="110" fill="#1a9850"/><text x="735" y="134" font-size="12" text-anchor="middle">4542</text><text x="735" y="270" font-size="12" text-anchor="middle">a2 eth3</text>
+<rect x="800" y="140" width="70" height="110" fill="#1a9850"/><text x="835" y="134" font-size="12" text-anchor="middle">4540</text><text x="835" y="270" font-size="12" text-anchor="middle">a2 eth4</text>
+<text x="500" y="300" font-size="13">goodput 2800 of 2800 pkt/s; worst flow 700 pkt/s</text>
+</svg>
