@@ -7,20 +7,36 @@ NAME   ?= silent-link
 LAB    := $(SUDO) python3 src/lab.py
 
 .DEFAULT_GOAL := help
-.PHONY: help test preflight up up-baseline up-mrc down down-baseline down-mrc experiment evidence report viz demo
+.PHONY: help test preflight up up-baseline up-mrc down down-baseline down-mrc \
+        experiment spray link-down silent-link partial-loss gray-switch nic-plane \
+        ecmp-collision random-loss evidence report viz demo
 
 help:
 	@echo "make test                  unit tests (no containers needed)"
 	@echo "make preflight             check the host can run the lab"
+	@echo ""
+	@echo "== Deployment =="
 	@echo "make up                    deploy BOTH fabrics (baseline + mrc)"
-	@echo "make experiment NAME=silent-link FABRIC=mrc"
-	@echo "                           NAME: link-down silent-link partial-loss gray-switch nic-plane"
-	@echo "                                 ecmp-collision random-loss silent-link-bfd gray-switch-bfd all"
-	@echo "make demo                  run silent-link on both fabrics and print the comparison"
-	@echo "make viz                   regenerate the animated SVGs in docs/img/"
-	@echo "make evidence              re-run everything and store results in docs/evidence"
-	@echo "make report                rebuild docs/evidence/*/README.md from stored data"
+	@echo "make up-baseline           deploy baseline fabric only"
+	@echo "make up-mrc                deploy mrc fabric only"
 	@echo "make down                  destroy both fabrics"
+	@echo ""
+	@echo "== Quick Experiments (auto-selects fabric) =="
+	@echo "make spray                 multi-hop packet capture (mrc only)"
+	@echo "make link-down             T0-T1 link admin down (both fabrics)"
+	@echo "make silent-link           silent link failure (both fabrics)"
+	@echo "make partial-loss          20% loss on one link (both fabrics)"
+	@echo "make gray-switch           spine drops traffic (both fabrics)"
+	@echo "make nic-plane             receiver loses plane-1 ports (both fabrics)"
+	@echo "make ecmp-collision        4 flows on limited links (both fabrics)"
+	@echo "make random-loss           0.1% / 1% loss on all links (both fabrics)"
+	@echo ""
+	@echo "== Advanced =="
+	@echo "make experiment NAME=<name> FABRIC=<baseline|mrc>"
+	@echo "make demo                  run silent-link on both fabrics + generate SVG"
+	@echo "make viz                   regenerate the animated SVGs in docs/img/"
+	@echo "make evidence              re-run everything and store in docs/evidence"
+	@echo "make report                rebuild docs/evidence/*/README.md from stored data"
 
 test:
 	python3 -m unittest discover -s tests -q
@@ -44,6 +60,37 @@ down-mrc:
 # The -bfd experiments only exist on the baseline fabric.
 experiment:
 	$(LAB) experiment $(NAME) --fabric $(if $(findstring -bfd,$(NAME)),baseline,$(FABRIC))
+
+# Individual experiment targets for easy discovery
+spray:
+	$(LAB) experiment spray --fabric mrc
+
+link-down:
+	$(LAB) experiment link-down --fabric baseline
+	$(LAB) experiment link-down --fabric mrc
+
+silent-link:
+	$(LAB) experiment silent-link --fabric baseline
+	$(LAB) experiment silent-link --fabric mrc
+
+partial-loss:
+	$(LAB) experiment partial-loss --fabric baseline
+	$(LAB) experiment partial-loss --fabric mrc
+
+gray-switch:
+	$(LAB) experiment gray-switch --fabric baseline
+	$(LAB) experiment gray-switch --fabric mrc
+
+nic-plane:
+	$(LAB) experiment nic-plane --fabric mrc
+
+ecmp-collision:
+	$(LAB) experiment ecmp-collision --fabric baseline
+	$(LAB) experiment ecmp-collision --fabric mrc
+
+random-loss:
+	$(LAB) experiment random-loss --fabric baseline
+	$(LAB) experiment random-loss --fabric mrc
 
 demo:
 	$(LAB) experiment silent-link --fabric baseline

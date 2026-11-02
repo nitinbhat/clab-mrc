@@ -54,13 +54,19 @@ Then play (needs Linux 6.1+, Docker, containerlab; see [Requirements](#quick-sta
 make test                 # no lab needed
 make up                   # both fabrics: baseline (BGP) and mrc
 make demo                 # same silent link failure on both, compare the output
+make spray                # multi-hop packet capture (mrc only)
+make gray-switch          # spine stops forwarding (both fabrics)
 docker exec clab-mrc-multi-plane-multi-link-a1 vtysh -c "show ipv6 route bgp"  # baseline switch (BGP routes)
 docker exec clab-mrc-multi-plane-multi-link-mrc-a1 ip -6 route                # mrc switch: static routes only
-make experiment NAME=gray-switch FABRIC=baseline
-make experiment NAME=gray-switch FABRIC=mrc
-make experiment NAME=ecmp-collision FABRIC=baseline   # run it again: the hash is random per seed
 make down
 ```
+
+**Where to find results**: Experiment outputs (PCAPs, JSON) are saved in
+`topologies/<profile>[-<fabric>]/results/experiments/<experiment-name>/`. For example:
+- `make demo` → `topologies/multi-plane-multi-link[-mrc]/results/experiments/silent-link/`
+- `make spray` → `topologies/multi-plane-multi-link-mrc/results/experiments/spray/`
+
+Use `make evidence` to copy all results to `docs/evidence/` (for Git commits).
 
 Things to try: change
 the number of EVs in `mrc_sender_args()`; change the fault in the `FAULTS` table
@@ -156,6 +162,79 @@ make demo                                  # silent-link on both fabrics + regen
 make experiment NAME=gray-switch FABRIC=mrc
 make down
 ```
+
+<details>
+<summary>Click to see example output from <code>make up</code> and <code>make demo</code></summary>
+
+```
+$ make test
+python3 -m unittest discover -s tests -q
+----------------------------------------------------------------------
+Ran 43 tests in 0.034s
+
+OK
+
+$ make up
+python3 src/lab.py deploy --fabric baseline
+preflight seg6local_end: OK
+preflight seg6_encap: OK
+preflight next_csid_retained: OK
+preflight usid_forwarding: OK
+09:18:34 INFO Creating lab directory path=topologies/multi-plane-multi-link/clab-mrc-multi-plane-multi-link
+09:18:34 INFO Creating container name=h1 name=h2 name=a1 name=a2 name=b1 name=b2 name=s11 name=s12 name=s21 name=s22
+09:18:37 INFO Created 16 links
+╭─────────────────────────────────────┬────────────────────┬─────────┬────────────────╮
+│                 Name                │     Kind/Image     │  State  │ IPv4/6 Address │
+├─────────────────────────────────────┼────────────────────┼─────────┼────────────────┤
+│ clab-mrc-multi-plane-multi-link-a1  │ linux              │ running │ 172.31.253.9   │
+│                                     │ mrc-poc-frr:10.5.0 │         │ N/A            │
+│ ... (10 containers) ...             │                    │         │                │
+╰─────────────────────────────────────┴────────────────────┴─────────┴────────────────╯
+Baseline fabric converged: eBGP up, ECMP installed, h1 reaches h2.
+
+python3 src/lab.py deploy --fabric mrc
+... (similar output for MRC fabric) ...
+mrc qp=1: delivered 200/200, losses=0, retransmissions=0
+All 8 static uSID paths deliver and acknowledge traffic.
+
+$ make demo
+python3 src/lab.py experiment silent-link --fabric baseline
+== silent-link (baseline)
+roce qp=9: delivered 200/200, losses=0, retransmissions=0
+{
+  "algo": "roce",
+  "goodput_pps": 1224,
+  "goodput_during_fault_pps": 708,
+  "recovery_ms": 2910,
+  "longest_zero_delivery_ms": 2900,
+  "losses": 171,
+  "retransmissions": 5818
+}
+
+python3 src/lab.py experiment silent-link --fabric mrc
+== silent-link (mrc)
+{
+  "algo": "mrc",
+  "goodput_pps": 1997,
+  "goodput_during_fault_pps": 1996,
+  "recovery_ms": 30,
+  "longest_zero_delivery_ms": 10,
+  "losses": 22,
+  "retransmissions": 22,
+  "first_ev_retired_ms": 20,
+  "evs_retired": ["10111", "10121"]
+}
+
+python3 src/viz.py
+skipped docs/img/silent-link.svg
+Open docs/img/silent-link.svg in a browser.
+```
+
+Key observations:
+- **Baseline**: 2.9s recovery, 2.9s zero delivery during BGP convergence
+- **MRC**: 30ms recovery, 10ms max zero delivery, EVs retired after 20ms
+
+</details>
 
 `make` runs without sudo when your user may use Docker and containerlab; if not,
 use `make up SUDO=sudo`. `make` alone lists every target. The underlying
