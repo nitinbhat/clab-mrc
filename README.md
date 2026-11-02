@@ -67,6 +67,9 @@ the number of EVs in `mrc_sender_args()`; change the fault in the `FAULTS` table
 (for example 5% loss instead of 20%); lower the BGP timers. After each
 change, run `make test` and then an experiment.
 
+**Note**: `make demo` regenerates SVG visualizations from evidence. If you see
+"skipped", the SVGs are already up to date. To force regeneration: `rm docs/img/*.svg && make demo`.
+
 ## See it first
 
 Animated replays of real runs (line thickness is
